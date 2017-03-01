@@ -1,0 +1,70 @@
+<?php
+
+namespace Bs\FrontOfficeBundle\Entity;
+
+use Doctrine\ORM\Mapping as ORM;
+
+/**
+ * Offremission
+ *
+ * @ORM\Table(name="offremission", indexes={@ORM\Index(name="idUser", columns={"idUser"})})
+ * @ORM\Entity
+ */
+class Offremission
+{
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="numOffre", type="integer", nullable=false)
+     * @ORM\Id
+     * @ORM\GeneratedValue(strategy="IDENTITY")
+     */
+    private $numoffre;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="date", type="string", length=255, nullable=false)
+     */
+    private $date;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="description", type="string", length=2000, nullable=false)
+     */
+    private $description;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="adresse", type="string", length=255, nullable=true)
+     */
+    private $adresse;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="horaire", type="string", length=255, nullable=false)
+     */
+    private $horaire;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="typeUser", type="string", length=255, nullable=true)
+     */
+    private $typeuser;
+
+    /**
+     * @var \User
+     *
+     * @ORM\ManyToOne(targetEntity="User")
+     * @ORM\JoinColumns({
+     *   @ORM\JoinColumn(name="idUser", referencedColumnName="idUser")
+     * })
+     */
+    private $iduser;
+
+
+}

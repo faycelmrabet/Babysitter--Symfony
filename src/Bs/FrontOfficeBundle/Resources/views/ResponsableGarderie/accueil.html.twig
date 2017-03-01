@@ -1,0 +1,199 @@
+{# src/Bs/FrontOfficeBundle/Resources/views/ResponsableGarderie/layout.html.twig #}
+{% extends "BsFrontOfficeBundle::layout.html.twig" %}
+
+{% block contenu %}
+<div class="title_top" >
+            	<h1>Espace Responsable Garderie</h1>
+                <h1>Bienvenu Mr ...</h1>
+            </div>
+            
+	        <!-- content -->
+	        <div class="content">
+            	
+                <!-- post list -->
+	            <div class="postlist">
+                	
+                    <div class="post-item">
+		                <div class="post-title">
+		                    <h2> <a href="{{path('bs_front_office_espace_evenement_accueil')}}">Espace Evenements</a></h2>
+		                                    
+		                </div>                            
+		                
+	                    <div class="post-image"><a href="blog-details.html"><img src="{{ asset('images/temp/evenement.jpg')}}" alt="" /></a></div>
+	                    
+		                <div class="entry clearfix">
+		                    <p>l'organisation des événements est le role principale pour chaque responsable garderie,en effet il lance des événements de sensibilisations pour les parents. ils sont sensés à savoir comment traiter leurs bébés.</p> 	                    
+		                </div>     
+                        <div class="post-meta-bot">
+                        <a href="{{path('bs_front_office_espace_responsable_galerie')}}" class="btn"><span>Accéder au gallerie</span></a> <a href="{{path('bs_front_office_espace_evenement_accueil')}}" class="btn btn_green"><span>Accéder A L'espace</span></a>
+                        </div>  
+					</div>
+                    
+                    <div class="post-item">
+		                <div class="post-title">
+		                    <h2><a href="{{path('bs_front_office_espace_garderie_accueil')}}">Espace Garderie</a></h2>
+		                                
+		                </div>                            
+		                
+	                    <div class="post-image"><a href="blog-details.html"><img src="{{ asset('images/temp/garderie.png')}}" alt="" /></a></div>
+	                    
+		                <div class="entry clearfix">
+		                    <p>Chaque responsable garderie peut gérer son espace garderie afin qu'il puisse publier les différents critéres de son garderie ,ainsi il peut crée une gallerie photo de son garderie.</p> 	                    
+		                </div>     
+                        <div class="post-meta-bot">
+                        <a href="{{path('bs_front_office_espace_responsable_galerie1')}}" class="btn"><span>Accéder au gallerie</span></a> <a href="{{path('bs_front_office_espace_garderie_accueil')}}" class="btn btn_green"><span>Accéder A L'espace</span></a>
+                        </div>  
+					</div>
+                    
+                   
+                    
+                    
+                </div>
+                <!--/ post list -->
+                
+              
+                
+	        </div>
+	        <!--/ content -->
+	
+	        <!-- sidebar -->
+	        <div class="sidebar">
+            	
+              
+                
+                <!-- flickr widget -->
+				<div class="widget-container flickr clearfix">
+	                <h3 class="widget-title">Des jouets aimables pour les enfants </h3>
+	                <div class="flickr_badge_image" id="flickr_badge_image1"><a href="#"><img src="{{asset('images/jouet/j1.jpg')}}" alt="A photo on Flickr" title="Bon Apetit HTML/WP template - Homepage" height="100" width="100"></a></div>
+	                
+	                <div class="flickr_badge_image" id="flickr_badge_image3"><a href="#"><img src="{{asset('images/jouet/j2.jpg')}}" alt="A photo on Flickr" title="Bon Apetit HTML/WP template - Homepage" height="100" width="100"></a></div>
+	                
+	                <div class="flickr_badge_image" id="flickr_badge_image2"><a href="#"><img src="{{asset('images/jouet/j3.jpg')}}" alt="A photo on Flickr" title="TechOffers HTML Newsletter" height="100" width="100"></a></div>
+	                
+	                <div class="flickr_badge_image" id="flickr_badge_image4"><a href="#"><img src="{{asset('images/jouet/j4.jpg')}}" alt="A photo on Flickr" title="TechOffers HTML Newsletter" height="100" width="100"></a></div>
+	                
+	                <div class="flickr_badge_image" id="flickr_badge_image5"><a href="#"><img src="{{asset('images/jouet/j5.jpg')}}" alt="A photo on Flickr" title="Art Gallery HTML/WP template - Homepage" height="100" width="100"></a></div>                        
+	                <div class="flickr_badge_image" id="flickr_badge_image6"><a href="#"><img src="{{asset('images/jouet/j6.jpg')}}" alt="A photo on Flickr" title="Bon Apetit HTML/WP template - Homepage" height="100" width="100"></a></div>
+	                
+	                <div class="flickr_badge_image" id="flickr_badge_image2"><a href="#"><img src="{{asset('images/jouet/j7.jpg')}}" alt="A photo on Flickr" title="TechOffers HTML Newsletter" height="100" width="100"></a></div>
+	                
+	                <div class="flickr_badge_image" id="flickr_badge_image1"><a href="#"><img src="{{asset('images/jouet/j8.jpg')}}" alt="A photo on Flickr" title="Bon Apetit HTML/WP template - Homepage" height="100" width="100"></a></div>
+	                
+	                <div class="flickr_badge_image" id="flickr_badge_image3"><a href="#"><img src="{{asset('images/jouet/j9.jpg')}}" alt="A photo on Flickr" title="Bon Apetit HTML/WP template - Homepage" height="100" width="100"></a></div>                
+	                
+	            </div>
+				<!--/ flickr widget -->
+				
+              
+                
+                <!-- widget_recent_comments -->                   
+	            <div class="widget-container widget_recent_comments">
+					<h3 class="widget-title">Derniers Commentaires</h3>
+	                <ul id="recentcomments">
+	                    <li class="recentcomments">
+	                    <a href="post-details.html"><img src="{{asset('images/comment/me.jpg')}}" alt="" class="thumbnail"></a> 
+	                    <span class="recent_comment"><a href="#" rel="external nofollow" class="url">Mr semer:</a>j'ai admiré vos services</span><span class="clear"></span></li>
+	                    <li class="recentcomments">
+	                    <a href="post-details.html"><img src="{{asset('images/comment/me.jpg')}}" alt="" class="thumbnail"></a> 
+	                    <span class="recent_comment"><a href="#" rel="external nofollow" class="url">Mr semer1:</a> je veut inscrire mon enfant dans la garderie touyour aljannah ...</span><span class="clear"></span></li>
+	                    <li class="recentcomments">
+	                    <a href="post-details.html"><img src="{{asset('images/comment/me.jpg')}}" alt="" class="thumbnail"></a> 
+	                    <span class="recent_comment"><a href="#" rel="external nofollow" class="url">Mr semer2:</a>the best site ever thank you</span><span class="clear"></span></li>
+	                  
+	                </ul>
+				</div>
+				<!--/ widget_recent_comments --> 
+	            
+	            <!-- widget_text -->
+		        <div class="widget-container widget_text">
+					<h3 class="widget-title">Message De L'admin</h3>
+						<div class="textwidget">
+						<p>merci de disposer des photos de bonnes qualités pour les garderies et les événements.</p>
+					</div>
+				</div>	
+				<!--/ widget_text -->
+                
+                <!-- widget_tag_cloud -->
+		        <div class="widget-container widget_tag_cloud">	        	
+	                <h3 class="widget-title">Mots clés populaires:</h3>
+	                <div class="tagcloud">
+	                    <a href='#' class='tag-link-4' title='2 topics' style='font-size: 10pt;'><span>Matériels garderies</span></a>
+	                    <a href='#' class='tag-link-7' title='3 topics' style='font-size: 15pt;'><span>Conférence</span></a>
+	                    <a href='#' class='tag-link-3' title='2 topics' style='font-size: 10pt;'><span>Pédagogies</span></a>
+	                    <a href='#' class='tag-link-6' title='3 topics' style='font-size: 17pt;'><span>Santé</span></a>
+	                    <a href='#' class='tag-link-5' title='2 topics' style='font-size: 10pt;'><span>Sport</span></a>
+	                    <a href='#' class='tag-link-5' title='2 topics' style='font-size: 13pt;'><span>Activités</span></a>
+	                    <a href='#' class='tag-link-5' title='2 topics' style='font-size: 15pt;'><span>Parents</span></a>
+	                    <a href='#' class='tag-link-5' title='2 topics' style='font-size: 12pt;'><span>Budget</span></a>
+	                    <a href='#' class='tag-link-4' title='2 topics' style='font-size: 10pt;'><span>Financement</span></a>                    
+	                    <a href='#' class='tag-link-4' title='2 topics' style='font-size: 17pt;'><span>Sécurité</span></a>                                   
+	                </div>
+	            </div>
+	            <!--/ widget_tag_cloud -->
+	                        
+	            <!-- widget_calendar -->
+	        	<div class="widget-container widget_calendar">  
+	                        	
+		            <div id="calendar_wrap">
+		            <table id="wp-calendar" summary="Calendar">
+		            <caption>Avril 2013</caption>
+		        
+		            <thead>
+		            <tr>
+		                <th scope="col" title="Monday">l</th>
+		                <th scope="col" title="Tuesday">m</th>
+		                <th scope="col" title="Wednesday">m</th>
+		                <th scope="col" title="Thursday">j</th>
+		                <th scope="col" title="Friday">v</th>
+		        
+		                <th scope="col" title="Saturday">s</th>
+		                <th scope="col" title="Sunday">d</th>
+		            </tr>
+		            </thead>
+		        
+		            <tfoot>
+		            <tr>
+		                <td colspan="3" id="prev"><a href="#" title="View posts for March 2013">« Mar</a></td>
+		                <td class="pad">&nbsp;</td>
+		                <td colspan="3" id="next"><a href="#" title="View posts for May 2013">May »</a></td>
+		            </tr>
+		            </tfoot>
+		        
+		            <tbody>
+		            <tr>
+		                <td colspan="6" class="pad">&nbsp;</td><td>1</td>
+		            </tr>
+		        
+		            <tr>
+		                <td>2</td><td>3</td><td>4</td><td>5</td><td>6</td><td>7</td><td>8</td>
+	
+		            </tr>
+		            <tr>
+		                <td>9</td><td><a href="#" title="Hello world!, Test 3">10</a></td><td>11</td><td>12</td><td>13</td><td>14</td><td>15</td>
+		        
+		            </tr>
+		            <tr>
+		                <td>16</td><td>17</td><td id="today">18</td><td>19</td><td>20</td><td>21</td><td>22</td>
+		            </tr>
+		            <tr>
+		        
+		                <td>23</td><td>24</td><td>25</td><td>26</td><td>27</td><td>28</td><td>29</td>
+		            </tr>
+		            <tr>
+		                <td>30</td><td>31</td>
+		        
+		                <td class="pad" colspan="5">&nbsp;</td>
+		            </tr>
+		            </tbody>
+		            </table>
+		            </div>
+		        </div>
+		        <!--/ widget_calendar -->
+                
+                
+                
+	        </div>
+	        <!--/ sidebar -->
+            
+            <div class="clear"></div>
+            {% endblock %}

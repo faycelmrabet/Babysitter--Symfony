@@ -1,0 +1,187 @@
+{% extends "BsFrontOfficeBundle::layout.html.twig" %} 
+{% block  contenu %}     
+<div id="mid_bird"></div>
+        <div id="mid_baloon"></div>
+    
+    	<!-- header slider -->
+		<div class="header_slider">
+        
+			<div class="banner-container">
+				<div class="banner">
+                	<ul>
+                    	<li data-transition="fade" data-slotamount="10" data-masterspeed="300">
+                        	<img src="{{asset('bundles/bsfrontoffice/KiddoTurf/images/temp/slider_1_1.jpg')}}" alt="">
+                            
+                            <div class="caption sft slide_title1" data-x="500" data-y="55" data-speed="900" data-start="400" data-easing="easeOutExpo">
+                            	hello
+                            </div>
+                            <div class="caption sfl slide_title2" data-x="500" data-y="90" data-speed="900" data-start="500" data-easing="easeOutExpo">
+		                    	ccc
+		                    </div>
+                            <div class="caption sfl slide_line" data-x="500" data-y="145" data-speed="900" data-start="600" data-easing="easeOutExpo"></div>
+                            
+                            <div class="caption sfl slide_descr" data-x="500" data-y="155" data-speed="600" data-start="700" data-easing="easeOutExpo">
+		                    	<p>Suspendisse dictum feugiat nisl ut dapibus. Mauris iaculis porttitor posuere. Praesent id metus massa, ut blandit odio. Proin quis tortor orci. Suspendisse dictum feugiat nisl ut dapibus. Mauris iaculis porttitor posuere.</p>
+		                    </div>
+                            <div class="caption sfb slide_btn" data-x="500" data-y="255" data-speed="900" data-start="1000" data-easing="easeOutExpo">
+		                    	<a href="#" class="btn_slider"><span>Play Now</span></a>
+		                    </div>
+                        </li>
+                        <li data-transition="3dcurtain-vertical" data-slotamount="10" data-masterspeed="200">
+                        	<img src="{{asset('bundles/bsfrontoffice/KiddoTurf/images/temp/slider_1_2.jpg')}}" alt="">
+                            
+                            <div class="caption sft slide_title1" data-x="280" data-y="45" data-speed="900" data-start="1300" data-easing="easeOutExpo">
+                            	Lorem ipsum
+                            </div>
+                            <div class="caption sfl slide_title2" data-x="280" data-y="80" data-speed="900" data-start="1500" data-easing="easeOutExpo">
+		                    	Cras nec mi quis
+		                    </div>
+                            <div class="caption sfl slide_line" data-x="280" data-y="135" data-speed="900" data-start="1600" data-easing="easeOutExpo"></div>
+                            
+                            <div class="caption sfl slide_descr" data-x="280" data-y="145" data-speed="600" data-start="1700" data-easing="easeOutExpo">
+		                    	<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras nec mi quis metus tincidunt blandit sit amet vel neque. Nullam semper porttitor nibh.</p>
+		                    </div>
+                            <div class="caption sfb slide_btn" data-x="280" data-y="245" data-speed="900" data-start="1800" data-easing="easeOutExpo">
+		                    	<a href="#" class="btn_slider"><span>Read More</span></a>
+		                    </div>
+                        </li>
+                        <li data-transition="3dcurtain-vertical" data-slotamount="10" data-masterspeed="200">
+                        	<img src="{{asset('bundles/bsfrontoffice/KiddoTurf/images/temp/slider_1_3.jpg')}}" alt="">
+                            
+                            <div class="caption sft slide_title1" data-x="80" data-y="55" data-speed="900" data-start="1400" data-easing="easeOutExpo">
+                            	home activities
+                            </div>
+                            <div class="caption sfl slide_title2" data-x="80" data-y="90" data-speed="900" data-start="1600" data-easing="easeOutExpo">
+		                    	Play & Grow
+		                    </div>
+                            <div class="caption sfl slide_line" data-x="80" data-y="145" data-speed="900" data-start="1700" data-easing="easeOutExpo"></div>
+                            
+                            <div class="caption sfl slide_descr" data-x="80" data-y="155" data-speed="600" data-start="1800" data-easing="easeOutExpo">
+		                    	<p>Vivamus tristique tempus lorem, in tincidunt justo molestie sit amet. Curabitur at velit nulla. Lorem ipsum dolor sit amet, consectetur adipiscing elit</p>
+		                    </div>
+                            <div class="caption sfb slide_btn" data-x="80" data-y="255" data-speed="900" data-start="1900" data-easing="easeOutExpo">
+		                    	<a href="#" class="btn_slider"><span>Play Now</span></a>
+		                    </div>
+                        </li>
+                    </ul>
+                </div>
+			</div>
+            <script>
+				jQuery(document).ready(function($) {
+	
+				if ($.fn.cssOriginal!=undefined)
+					$.fn.css = $.fn.cssOriginal;
+	
+				$('.banner').revolution({
+						delay:8000,
+						startwidth:940,
+						startheight:356,
+	
+						onHoverStop:"on",						// Stop Banner Timet at Hover on Slide on/off
+						hideThumbs:0,
+						navigationType:"none",					// bullet, thumb, none
+						navigationArrows:"solo",				// nexttobullets, solo (old name verticalcentered), none
+	
+						navigationStyle:"round",				// round,square,navbar,round-old,square-old,navbar-old, or any from the list in the docu (choose between 50+ different item), custom
+						
+						navigationHAlign:"center",				// Vertical Align top,center,bottom
+						navigationVAlign:"center",				// Horizontal Align left,center,right
+						
+						soloArrowLeftHalign:"left",
+						soloArrowLeftValign:"center",
+						soloArrowLeftHOffset:-29,
+						soloArrowLeftVOffset:0,
+
+						soloArrowRightHalign:"right",
+						soloArrowRightValign:"center",
+						soloArrowRightHOffset:-29,
+						soloArrowRightVOffset:0,
+	
+						touchenabled:"on",						// Enable Swipe Function : on/off
+	
+						stopAtSlide:-1,							// Stop Timer if Slide "x" has been Reached. If stopAfterLoops set to 0, then it stops already in the first Loop at slide X which defined. -1 means do not stop at any slide. stopAfterLoops has no sinn in this case.
+						stopAfterLoops:-1,						// Stop Timer if All slides has been played "x" times. IT will stop at THe slide which is defined via stopAtSlide:x, if set to -1 slide never stop automatic
+	
+						hideCaptionAtLimit:0,					// It Defines if a caption should be shown under a Screen Resolution ( Basod on The Width of Browser)
+						hideAllCaptionAtLilmit:0,				// Hide all The Captions if Width of Browser is less then this value
+						hideSliderAtLimit:0,					// Hide the whole slider, and stop also functions if Width of Browser is less than this value
+	
+						fullWidth:"off",
+						shadow:0								//0 = no Shadow, 1,2,3 = 3 Different Art of Shadows -  (No Shadow in Fullwidth Version !)
+	
+					});
+				});
+			</script>
+            
+		</div>
+		<!--/ header slider -->
+        
+        <!-- boxes, 3 cols -->
+        <div class="boxrow clearfix">
+                  
+            <div class="box box_1">
+                <div class="box_content">
+              <h3>Parent</h3>	
+               <div class="box_thumb_round"><img src="{{asset('bundles/bsfrontoffice/KiddoTurf/images/temp/bebe210113.jpg')}}" alt=""></div>                    
+                    <div class="staff_title"><strong>Maman, Papa</strong> <br> <span class="subtitle"></span></div>
+                    <p>Je recherche une baby sitter ou une nounou  </p>
+                </div>
+                <div class="box_bot">
+                     <a href="#" class="btn"><span>Inscription</span></a>
+                </div>
+            </div>
+            
+            <div class="box box_2">
+                <div class="box_content">
+                <h3>Responsable Garderie</h3>	
+               <div class="box_thumb_round"><img src="{{asset('bundles/bsfrontoffice/KiddoTurf/images/temp/anim9.jpg')}}" alt=""></div>                    
+                    <div class="staff_title"><strong>Responsable Garderie</strong> <br> <span class="subtitle"></span></div>
+                    <p>Je souhaite ajouter mon espace  </p>
+                </div>
+                <div class="box_bot">
+                  <a href="{{ path('bs_front_office_espace_responsable') }}" class="btn"><span>Inscription</span></a>
+                </div>
+            </div>
+            
+            <div class="box box_3">
+                <div class="box_content">
+                	<h3>Baby Sitter</h3>
+                	<div class="box_thumb_round"><img src="{{asset('bundles/bsfrontoffice/KiddoTurf/images/temp/staff_1.jpg')}}" alt=""></div>                    
+                    <div class="staff_title"><strong>Baby sitter ,Nounou</strong> <br> <span class="subtitle"></span></div>
+                    <p>Je souhaite garder des enfants </p>
+                </div>
+                <div class="box_bot">
+                <a href="#" class="btn"><span>Inscription</span></a>
+                </div>
+            </div>
+                
+        </div>
+        <!--/ boxes, 3 cols -->
+        
+    	<div class="big_button_box">
+        	<a href="#" class="btn_custom"><strong>Get in Touch Now!</strong></a>
+        </div>
+        
+        <!-- bottom 2 boxes -->
+       <!-- <div class="bottom_boxes">
+        	<div class="box box_circle_date">
+            	<div class="ribbon"><strong>25</strong> <span>august</span></div>
+                <div class="box_content">
+	                <h2><a href="#">Children in the garden ligula lacinia scelerisque</a></h2>
+	                <p>Curabitur vulputate, ligula lacinia scelerisque tempor, lacus lacus ornare ante, ac egestas.</p>
+	                <a href="#" class="link_more">Read Article</a>
+                </div>
+            </div>
+            
+            <div class="box box_circle_photo">
+            	<div class="ribbon"><span></span><img src="{{asset('bundles/bsfrontoffice/KiddoTurf/images/temp/ribbon_photo.jpg')}}" alt=""></div>
+                <div class="box_content">
+                	<p>&ldquo;Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum auctor.&rdquo;</p>
+                    <span class="author">&minus; Harry Simons</span>
+                </div>
+            </div>
+        </div>-->
+        <!--/ bottom 2 boxes -->
+        
+      <div id="bottom_bee"></div> 
+      {% endblock %}

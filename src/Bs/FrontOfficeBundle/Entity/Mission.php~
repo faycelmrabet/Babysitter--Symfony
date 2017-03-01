@@ -1,0 +1,67 @@
+<?php
+
+namespace Bs\FrontOfficeBundle\Entity;
+
+use Doctrine\ORM\Mapping as ORM;
+
+/**
+ * Mission
+ *
+ * @ORM\Table(name="mission")
+ * @ORM\Entity
+ */
+class Mission
+{
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="idMission", type="integer", nullable=false)
+     * @ORM\Id
+     * @ORM\GeneratedValue(strategy="IDENTITY")
+     */
+    private $idmission;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="date", type="string", length=255, nullable=false)
+     */
+    private $date;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="description", type="string", length=255, nullable=false)
+     */
+    private $description;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="adresse", type="string", length=255, nullable=true)
+     */
+    private $adresse;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="horaire", type="string", length=255, nullable=false)
+     */
+    private $horaire;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="idUser", type="integer", nullable=true)
+     */
+    private $iduser;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="typeUser", type="string", length=255, nullable=true)
+     */
+    private $typeuser;
+
+
+}

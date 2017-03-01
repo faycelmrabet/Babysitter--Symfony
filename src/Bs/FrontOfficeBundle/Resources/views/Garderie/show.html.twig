@@ -1,0 +1,49 @@
+{% extends "BsFrontOfficeBundle::layout.html.twig" %}
+
+{% block contenu %}
+    <h1>Garderie</h1>
+
+    <table class="record_properties">
+        <tbody>
+            <tr>
+                <th>Idgarderie</th>
+                <td>{{ entity.idgarderie }}</td>
+            </tr>
+            <tr>
+                <th>Nomgarderie</th>
+                <td>{{ entity.nomgarderie }}</td>
+            </tr>
+            <tr>
+                <th>description</th>
+                <td>{{ entity.description }}</td>
+            </tr>
+            <tr>
+                <th>tarif</th>
+                <td>{{ entity.tarif }}</td>
+            </tr>
+            <tr>
+                <th>codepostale</th>
+                <td>{{ entity.codepostale }}</td>
+            </tr>
+            <tr>
+                <th>nomresponsable</th>
+                <td>{{ entity.nomresponsable }}</td>
+            </tr>
+        </tbody>
+    </table>
+
+        <ul class="record_actions">
+    <li>
+        <a href="{{ path('bs_front_office_espace_garderie') }}">
+            Retour à la liste des garderies
+        </a>
+    </li>
+     <li>
+        <a href="{{ path('bs_front_office_espace_garderie_edit', { 'id': entity.idgarderie }) }}">
+            Editer
+        </a>
+    </li>
+    
+</ul>
+    
+{% endblock %}

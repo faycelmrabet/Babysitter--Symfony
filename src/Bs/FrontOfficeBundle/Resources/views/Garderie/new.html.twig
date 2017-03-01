@@ -1,0 +1,57 @@
+{% extends "BsFrontOfficeBundle::layout.html.twig" %}
+
+{% block contenu %}
+    <h1>Lancer Une Garderie </h1>
+    
+    <form action="#" method="post" {{ form_enctype(form) }}>
+        <table  width="700px" height="400px" style="margin: 80px">
+    <tr>
+        <td><b>Nom Garderie</b></td>
+        <td>
+        {{ form_widget(form.nomgarderie) }}
+            </td>
+        </tr>
+        <tr>
+            <td><b>Description</b></td>
+            <td>
+        {{ form_widget(form.description) }}
+                </td>
+            </tr>
+            
+        <tr>
+            <td><b>Tarif</b></td>
+            <td>
+        {{ form_widget(form.tarif) }}
+                </td>
+           </tr> 
+           <tr>
+               <td><b>Code Postale</b></td>
+               <td>
+        {{ form_widget(form.codepostale) }}
+                   </td>
+                </tr>
+                <tr>
+                    <td><b>Nom Responsable</b></td>
+                    <td>
+        {{ form_widget(form.nomresponsable) }}
+                        </td>
+                    </tr>
+                     <tr>
+                         <td><b>Image Garderie</b></td>
+                         <td>
+               {{ form_widget(form.file) }}
+                             </td>
+                          </tr>
+    </table>
+          <a href="{{ path('bs_front_office_espace_garderie_accueil') }}" class="btn btn_green">
+            <span>Retour à la liste des garderies</span>
+        </a>
+    <input type="submit" value="Créer Garderie" />
+    {{ form_rest(form)}}
+</form>
+
+
+
+        
+      
+{% endblock %}

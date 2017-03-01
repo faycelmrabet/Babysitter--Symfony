@@ -1,0 +1,79 @@
+{% extends "BsFrontOfficeBundle::layout.html.twig" %}
+{% block contenu %}
+
+<table width="960px" style="background-color:#fff998;" >
+   {% for entity in entities %}
+    <tr>       
+   
+        <td>
+           <div  class="staff_item every_2nd every_3rd">
+<div class="staff_thumb">
+<img src="{{ asset('uploads/files/')}}{{entity.getIdgarderie}}.{{entity.getPath}}" width="900px" height="350px"  />
+</div>
+               </div>
+        </td>
+   
+    
+        <td>
+        <div  class="staff_item every_2nd every_3rd">
+
+             
+        <table class="record_properties" height="350px" width="260px" style="background-color:#fb9b52;margin-top:11px">
+        <tbody>
+          
+            <tr>
+                <th>Nom De L'evenement:</th>
+                <td>{{entity.nomgarderie}}</td>
+            </tr>
+            <tr>
+                <th>Description:</th>
+                <td>{{ entity.description }}</td>
+            </tr>
+            <tr>
+                <th>Tarif:</th>
+                <td>{{ entity.tarif }}</td>
+            </tr>
+            <tr>
+                <th>Code Postale:</th>
+                <td>{{ entity.codepostale }}</td>
+            </tr>
+            <tr>
+                <th>Nombre Des Visiteur:</th>
+                <td>{{ entity.nomresponsable }}</td>
+            </tr>
+            
+        </tbody>
+    </table>
+
+            </div>
+        
+    
+        </td>
+        
+        <td>
+             </br></br></br>
+            <div  class="staff_item every_2nd every_3rd">
+           
+            <a href="{{ path('bs_front_office_espace_garderie_create') }}" class="btn">
+                Ajouter Garderie
+            </a>
+        
+        </br></br></br></br>
+        
+            <a href="{{ path('bs_front_office_espace_garderie_edit', {id:entity.idgarderie}) }}" class="btn">
+                Modifier Garderie
+            </a>
+        </br></br></br></br>
+        <a href="{{ path('bs_front_office_espace_garderie_supprimer', {id:entity.idgarderie}) }}" class="btn">
+                Supprimer Garderie
+            </a>
+        
+            </div>
+        </td>
+        
+    </tr>
+   {% endfor %} 
+<tr><td><a href="{{ path('bs_front_office_espace_responsable')}}" class="btn btn_green"><span>Retour A L'espace Responsable</span></a></td></tr>   
+</table>
+
+{% endblock %}

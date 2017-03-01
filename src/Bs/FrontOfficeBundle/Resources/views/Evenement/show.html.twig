@@ -1,0 +1,49 @@
+{% extends "BsFrontOfficeBundle::layout.html.twig" %}
+
+{% block contenu %}
+    <h1>Evenement</h1>
+
+    <table class="record_properties">
+        <tbody>
+            <tr>
+                <th>Idevenement</th>
+                <td>{{ entity.idevenement }}</td>
+            </tr>
+            <tr>
+                <th>Nomevenement</th>
+                <td>{{ entity.nomevenement }}</td>
+            </tr>
+            <tr>
+                <th>Lieuevenement</th>
+                <td>{{ entity.lieuevenement }}</td>
+            </tr>
+            <tr>
+                <th>Dateevenement</th>
+                <td>{{ entity.dateevenement }}</td>
+            </tr>
+            <tr>
+                <th>Organisateur</th>
+                <td>{{ entity.organisateur }}</td>
+            </tr>
+            <tr>
+                <th>Nbrevisiteur</th>
+                <td>{{ entity.nbrevisiteur }}</td>
+            </tr>
+        </tbody>
+    </table>
+
+        <ul class="record_actions">
+    <li>
+        <a href="{{ path('bs_front_office_espace_evenement') }}">
+            Retour à la liste des evenements
+        </a>
+    </li>
+     <li>
+        <a href="{{ path('bs_front_office_espace_evenement_edit', { 'id': entity.idevenement }) }}">
+            Edit
+        </a>
+    </li>
+    
+</ul>
+   
+{% endblock %}

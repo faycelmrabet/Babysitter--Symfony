@@ -1,0 +1,60 @@
+<?php
+
+namespace Bs\FrontOfficeBundle\Entity;
+
+use Doctrine\ORM\Mapping as ORM;
+
+/**
+ * Evenement
+ *
+ * @ORM\Table(name="evenement")
+ * @ORM\Entity
+ */
+class Evenement
+{
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="idEvenement", type="integer", nullable=false)
+     * @ORM\Id
+     * @ORM\GeneratedValue(strategy="IDENTITY")
+     */
+    private $idevenement;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="nomEvenement", type="string", length=255, nullable=false)
+     */
+    private $nomevenement;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="lieuEvenement", type="string", length=255, nullable=false)
+     */
+    private $lieuevenement;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="dateEvenement", type="string", length=50, nullable=false)
+     */
+    private $dateevenement;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="organisateur", type="string", length=255, nullable=false)
+     */
+    private $organisateur;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="nbreVisiteur", type="integer", nullable=false)
+     */
+    private $nbrevisiteur;
+
+
+}

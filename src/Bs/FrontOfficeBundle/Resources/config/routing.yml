@@ -1,0 +1,51 @@
+
+
+bs_front_office:
+    path:     /testRes
+    defaults: { _controller: BsFrontOfficeBundle:Default:test }
+    
+    
+bs_front_office_espace_responsable:
+    path:     /responsable
+    defaults: { _controller: BsFrontOfficeBundle:ResponsableGarderie:accueil }
+    
+bs_front_office_espace_responsable_galerie:
+    path:     /responsableGalerie
+    defaults: { _controller: BsFrontOfficeBundle:ResponsableGarderie:galerie }
+
+bs_front_office_espace_responsable_galerie1:
+    path:     /responsableGalerie1
+    defaults: { _controller: BsFrontOfficeBundle:ResponsableGarderie:galerie1 }
+    
+bs_front_office_espace_responsable_temoignage:
+    path:     /responsableTemoignage
+    defaults: { _controller: BsFrontOfficeBundle:ResponsableGarderie:temoignage }
+    
+    
+bs_front_office_espace_evenement_accueil:
+    path:     /responsableAffAc
+    defaults: { _controller: BsFrontOfficeBundle:Evenement:upload } 
+bs_front_office_espace_evenement_create:
+    path:     /responsableCreate
+    defaults: { _controller: BsFrontOfficeBundle:Evenement:upload1 }
+bs_front_office_espace_evenement_edit:
+    path:     /responsableEdit/{id}
+    defaults: { _controller: BsFrontOfficeBundle:Evenement:modifier }
+bs_front_office_espace_evenement_supprimer:
+    path:     /supprimerEvenement/{id}
+    defaults: { _controller: BsFrontOfficeBundle:Evenement:supprimer }     
+       
+
+bs_front_office_espace_garderie_accueil:
+    path:     /responsableAffAc1
+    defaults: { _controller: BsFrontOfficeBundle:Garderie:accueilga }
+bs_front_office_espace_garderie_create:
+    path:     /responsableCreateG
+    defaults: { _controller: BsFrontOfficeBundle:Garderie:ajout1 }
+bs_front_office_espace_garderie_edit:
+    path:     /responsableEditG/{id}
+    defaults: { _controller: BsFrontOfficeBundle:Garderie:modifier }
+bs_front_office_espace_garderie_supprimer:
+    path:     /supprimerGarderie/{id}
+    defaults: { _controller: BsFrontOfficeBundle:Garderie:supprimer }
+

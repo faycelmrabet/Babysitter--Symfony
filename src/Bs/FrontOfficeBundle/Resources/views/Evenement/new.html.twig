@@ -1,0 +1,59 @@
+{% extends "BsFrontOfficeBundle::layout.html.twig" %}
+
+{% block contenu %}
+    <h1>Création D'un Événement </h1>
+    
+    <form action="#" method="post" {{ form_enctype(form) }}>
+        <table width="700px" height="400px" style="margin: 80px">
+    <tr>
+        <td><b>Nom Événement</b></td>
+        <td>
+        {{ form_widget(form.nomevenement) }}
+            </td>
+        </tr>
+        <tr>
+            <td><b>Lieu Ou Espace De Déroulement</br></td>
+            <td>
+        {{ form_widget(form.lieuevenement) }}
+                </td>
+            </tr>
+            
+        <tr>
+            <td><b>Date</br></td>
+            <td>
+        {{ form_widget(form.dateevenement) }}
+                </td>
+           </tr> 
+           <tr>
+               <td><b>Nom De L'organisateur</br></td>
+               <td>
+        {{ form_widget(form.organisateur) }}
+                   </td>
+                </tr>
+                <tr>
+                    <td><b>Nombre Des Places Disponibles</br> </td>
+                    <td>
+        {{ form_widget(form.nbrevisiteur) }}
+                        </td>
+                    </tr>
+                     <tr>
+                         <td><b>Affiche De L'événement</br></td>
+                         <td>
+        {{ form_widget(form.file) }}
+                             </td>
+                          </tr>
+    </table>
+        </br>
+    <a href="{{ path('bs_front_office_espace_evenement_accueil') }}" class="btn btn_green">
+        <span>Retour à la liste des evenements</span>
+        </a>
+        <input type="submit" value="Créer Evenement" />
+    {{ form_rest(form)}}
+</form>
+
+
+
+  
+{% endblock %}
+    
+   

@@ -1,0 +1,77 @@
+<?php
+
+namespace Bs\FrontOfficeBundle\Entity;
+
+use Doctrine\ORM\Mapping as ORM;
+
+/**
+ * Fichebabysitter
+ *
+ * @ORM\Table(name="fichebabysitter", indexes={@ORM\Index(name="idUser", columns={"idUser"})})
+ * @ORM\Entity
+ */
+class Fichebabysitter
+{
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="idFiche", type="integer", nullable=false)
+     * @ORM\Id
+     * @ORM\GeneratedValue(strategy="IDENTITY")
+     */
+    private $idfiche;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="nom", type="string", length=50, nullable=false)
+     */
+    private $nom;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="titre", type="string", length=255, nullable=false)
+     */
+    private $titre;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="experience", type="string", length=2000, nullable=false)
+     */
+    private $experience;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="consigne", type="string", length=120, nullable=false)
+     */
+    private $consigne;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="prenom", type="string", length=255, nullable=false)
+     */
+    private $prenom;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="photo", type="blob", nullable=true)
+     */
+    private $photo;
+
+    /**
+     * @var \User
+     *
+     * @ORM\ManyToOne(targetEntity="User")
+     * @ORM\JoinColumns({
+     *   @ORM\JoinColumn(name="idUser", referencedColumnName="idUser")
+     * })
+     */
+    private $iduser;
+
+
+}

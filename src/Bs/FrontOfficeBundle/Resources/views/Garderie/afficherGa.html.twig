@@ -1,0 +1,51 @@
+{# src/Esprit/BabyBundle/Resources/views/Evenement/layout.html.twig #}
+{% extends "BsFrontOfficeBundle::layout.html.twig" %}
+ 
+{% block contenu %}
+
+    <h1 >Liste Garderies</h1>
+
+    <table width="950px"  class="box_sprite_inner clearfix">
+        
+            <tr >
+                <th class="box_sprite_inner clearfix"><h3>idgarderie</h3></th>
+                <th class="box_sprite_inner clearfix"><h3>nomgarderie</h3></th>
+                <th class="box_sprite_inner clearfix"><h3> description</h3></th>
+                <th class="box_sprite_inner clearfix"><h3>tarif</h3></th>
+                <th class="box_sprite_inner clearfix"><h3>codepostale</h3></th>
+                <th class="box_sprite_inner clearfix"><h3>nomresponsable</h3></th>
+                <th class="box_sprite_inner clearfix"><h3>Actions</h3></th>
+            </tr>
+        
+        
+        {% for entity in entities %}
+            <tr>
+                <th class="box_sprite_inner clearfix"><a href="{{ path('bs_front_office_espace_evenement', { 'id': entity.idgarderie }) }}">{{ entity.idgarderie  }}</a></th>
+                <th class="box_sprite_inner clearfix">{{ entity.nomgarderie }}</th>
+                <th class="box_sprite_inner clearfix">{{ entity.description }}</th>
+                <th class="box_sprite_inner clearfix">{{ entity.tarif }}</th>
+                <th class="box_sprite_inner clearfix">{{ entity.codepostale }}</th>
+                <th class="box_sprite_inner clearfix">{{ entity.nomresponsable }}</th>
+                <td class="box_sprite_inner clearfix">
+                <ul>
+                    <li>
+                       <a href="{{ path('bs_front_office_espace_garderie_show', { 'id': entity.idgarderie }) }}">afficher</a>  
+                    </li>
+                    <li>
+                      <a href="{{ path('bs_front_office_espace_garderie_edit', { 'id': entity.idgarderie }) }}">editer</a> 
+                    </li>
+                </ul>
+                </td>
+            </tr>
+        {% endfor %}
+        
+    </table>
+
+        <ul>
+        <li>
+            <a href="{{ path('bs_front_office_espace_garderie_create') }}">
+                Ajouter Garderie
+            </a>
+        </li>
+    </ul>
+    {% endblock %}

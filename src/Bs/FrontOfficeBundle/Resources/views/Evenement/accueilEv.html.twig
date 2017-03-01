@@ -1,0 +1,78 @@
+{% extends "BsFrontOfficeBundle::layout.html.twig" %}
+{% block contenu %}
+
+<table width="960px" style="background-color:#fdeb8d;">
+   {% for entity in entities %}
+    <tr>       
+   
+        <td>
+           <div  class="staff_item every_2nd every_3rd">
+<div class="staff_thumb">
+<img src="{{ asset('uploads/documents/')}}{{entity.getIdevenement}}.{{entity.getPath}}" width="900px" height="350px"  />
+</div>
+               </div>
+        </td>
+   
+    
+        <td>
+        <div  class="staff_item every_2nd every_3rd">
+
+             
+        <table class="record_properties" height="350px" width="260px" style="background-color:#fb9b52;margin-top:11px" >
+        <tbody>
+          
+            <tr>
+                <th>Nom De L'evenement</th>
+                <td>{{entity.nomevenement}}</td>
+            </tr>
+            <tr>
+                <th>Lieu De l'evenement</th>
+                <td>{{ entity.lieuevenement }}</td>
+            </tr>
+            <tr>
+                <th>Date</th>
+                <td>{{ entity.dateevenement|date('Y-m-d') }}</td>
+            </tr>
+            <tr>
+                <th>Organisateur</th>
+                <td>{{ entity.organisateur }}</td>
+            </tr>
+            <tr>
+                <th>Nombre Des Visiteur</th>
+                <td>{{ entity.nbrevisiteur }}</td>
+            </tr>
+        </tbody>
+    </table>
+
+            </div>
+        
+    
+        </td>
+        
+        <td align="center">
+             </br></br></br>
+            <div  class="staff_item every_2nd every_3rd">
+           
+            <a href="{{ path('bs_front_office_espace_evenement_create') }}" class="btn">
+                Ajouter Evenement
+            </a>
+        
+        </br></br></br></br>
+        
+            <a href="{{ path('bs_front_office_espace_evenement_edit', {id:entity.idevenement}) }}" class="btn">
+                Modifier Evenement
+            </a>
+        </br></br></br></br>
+        <a href="{{ path('bs_front_office_espace_evenement_supprimer', {id:entity.idevenement}) }}" class="btn">
+                Supprimer Evenement
+            </a>
+        
+            </div>
+        </td>
+        
+    </tr>
+   {% endfor %} 
+    <tr><td><a href="{{ path('bs_front_office_espace_responsable')}}" class="btn btn_green"><span>Retour A L'espace Responsable</span></a></td></tr>
+</table>
+
+{% endblock %}

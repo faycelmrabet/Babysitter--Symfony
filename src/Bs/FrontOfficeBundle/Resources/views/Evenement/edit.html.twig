@@ -1,0 +1,64 @@
+{% extends "BsFrontOfficeBundle::layout.html.twig" %}
+
+{% block contenu %}
+    <h1>Evenement edit</h1>
+      
+    <form method="POST" action="{{path('bs_front_office_espace_evenement_edit',{'id':evenement.idevenement}) }}" {{ form_enctype(form) }}>
+
+                <table width="700px" height="400px" style="margin: 80px">
+    <tr>
+        <td>Nom Événement</td>
+        <td>
+        {{ form_widget(form.nomevenement) }}
+            </td>
+        </tr>
+        <tr>
+            <td>Lieu Ou Espace De Déroulement</td>
+            <td>
+        {{ form_widget(form.lieuevenement) }}
+                </td>
+            </tr>
+            
+        <tr>
+            <td>Date</td>
+            <td>
+        {{ form_widget(form.dateevenement) }}
+                </td>
+           </tr> 
+           <tr>
+               <td>Nom De L'organisateur</td>
+               <td>
+        {{ form_widget(form.organisateur) }}
+                   </td>
+                </tr>
+                <tr>
+                    <td>Nombre Des Places Disponibles </td>
+                    <td>
+        {{ form_widget(form.nbrevisiteur) }}
+                        </td>
+                    </tr>
+                     <tr>
+                         <td>Image</td>
+                     <td> {{ form_widget(form.file) }}</td>
+                          </tr>
+                          <tr>
+                              <td>
+                          
+                                  
+                          <input type="submit" value="Modifier Evenement" />
+                          
+                          </td>
+                          
+                          </tr>
+                          
+    </table>
+          
+      {{ form_rest(form)}}
+  </form>
+  
+
+   
+{% endblock %}
+
+    
+    

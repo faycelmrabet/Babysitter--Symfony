@@ -1,0 +1,51 @@
+{% extends "BsFrontOfficeBundle::layout.html.twig" %}
+
+{% block contenu %}  
+<div id="mid_bird"></div>
+        <div id="mid_baloon"></div>
+    	
+        <div class="content_wrapper">   
+        	
+            <div class="title_top">
+            	<h1>Galerie Des Événement</h1>
+            </div>
+            
+	        <!-- content -->
+	        <div class="content">
+            	
+                <!-- articles layout: 2 cols -->
+                   {% for entity in entities %}
+
+                <div class="clearfix article_list columns2" style="width:900px">
+                	
+                    
+                    	<div class="article_image"><a href="#"><img src="{{ asset('uploads/documents/')}}{{entity.getIdevenement}}.{{entity.getPath}}" width="800px" height="350px"  alt=""></a></div>
+                        
+                        <div class="article_title">
+                        	<h2><a href="#">{{entity.nomevenement}}</a></h2>
+                            <span class="subtitle">{{entity.organisateur}}</span>
+                                 
+                        </div>
+                        
+                        <div class="article_descr entry">
+                        <p>{{entity.lieuevenement}}</p>
+                        <a href="#" class="link_more">Read Article</a>
+                        </div>
+                   
+                   
+                    
+                {{ twitterButton() }}{{pinterestButton()}}{{linkedinButton()}}{{googleplusButton()}}{{facebookButton()}}      
+                </div>
+             
+                {% endfor %}
+                <!--/ articles layout: 2 cols -->
+                
+	        </div>
+	        <!--/ content -->
+		                    
+          <div class="clear"></div>
+        </div>
+        
+        
+      <div id="bottom_bee"></div> 
+      {% endblock %}

@@ -1,0 +1,123 @@
+<?php
+
+namespace Bs\FrontOfficeBundle\Entity;
+
+use Doctrine\ORM\Mapping as ORM;
+
+/**
+ * User
+ *
+ * @ORM\Table(name="user")
+ * @ORM\Entity
+ */
+class User
+{
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="idUser", type="integer", nullable=false)
+     * @ORM\Id
+     * @ORM\GeneratedValue(strategy="IDENTITY")
+     */
+    private $iduser;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="login", type="string", length=255, nullable=false)
+     */
+    private $login;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="password", type="string", length=255, nullable=false)
+     */
+    private $password;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="nom", type="string", length=255, nullable=false)
+     */
+    private $nom;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="prenom", type="string", length=255, nullable=false)
+     */
+    private $prenom;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="dateNaissance", type="string", length=50, nullable=true)
+     */
+    private $datenaissance;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="cin", type="integer", nullable=false)
+     */
+    private $cin;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="adresse", type="string", length=255, nullable=false)
+     */
+    private $adresse;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="codePostale", type="string", length=255, nullable=false)
+     */
+    private $codepostale;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="email", type="string", length=255, nullable=false)
+     */
+    private $email;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="telephone", type="integer", nullable=false)
+     */
+    private $telephone;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="nbreEnfant", type="integer", nullable=true)
+     */
+    private $nbreenfant;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="typeUser", type="string", length=255, nullable=false)
+     */
+    private $typeuser;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="etat", type="integer", nullable=false)
+     */
+    private $etat;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="note", type="integer", nullable=true)
+     */
+    private $note;
+
+
+}

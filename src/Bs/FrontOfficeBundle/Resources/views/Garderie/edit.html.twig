@@ -1,0 +1,52 @@
+{% extends "BsFrontOfficeBundle::layout.html.twig" %}
+
+{% block contenu %}
+    <h1>Modifier Garderie</h1>
+      
+    <form method="POST" action="{{path('bs_front_office_espace_garderie_edit',{'id':garderie.idgarderie}) }}" {{ form_enctype(form) }}>
+
+                <table width="700px" height="400px"  style="margin: 80px; "> 
+    <tr>
+        <td><b>Nom Garderie</b></td>
+        <td>
+        {{ form_widget(form.nomgarderie) }}
+            </td>
+        </tr>
+        <tr>
+            <td><b>Description</b></td>
+            <td>
+        {{ form_widget(form.description) }}
+                </td>
+            </tr>
+            
+        <tr>
+            <td><b>Tarif</b></td>
+            <td>
+        {{ form_widget(form.tarif) }}
+        {{ form_errors(form.tarif) }}
+                </td>
+           </tr> 
+           <tr>
+               <td><b>Code Postale</b></td>
+               <td>
+        {{ form_widget(form.codepostale) }}
+                   </td>
+                </tr>
+                <tr>
+                    <td><b>Nom Responsable</b></td>
+                    <td>
+        {{ form_widget(form.nomresponsable) }}
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+              <input type="submit" value="Modifier Garderie" /> 
+                        </td>
+              </tr>
+    </table>
+        
+      
+      {{ form_rest(form)}}
+  </form>
+
+{% endblock %}

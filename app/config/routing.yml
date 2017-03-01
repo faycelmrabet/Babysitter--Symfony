@@ -1,0 +1,4 @@
+bs_front_office:
+    resource: "@BsFrontOfficeBundle/Resources/config/routing.yml"
+    prefix:   /
+
